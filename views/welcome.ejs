@@ -1,0 +1,15 @@
+<%- include('includes/head.ejs', { title: 'Welcome to blogArea' }) %>
+</head>
+<body>
+  <%- include('includes/header.ejs') %>
+  <main>
+    <h2></h2><h1>Welcome to <span style="color: rgb(70, 0, 128); font-size: 3rem;">blogArea!</span></h1>
+    <p>This is a website to write and post blogs, and also to view them!</p>
+    <% if (!locals.user) { %>
+      <p><a href="/login">Login</a> to begin viewing and creating them!</p>
+    <% } else { %>
+      <p><a href="/posts">View</a> them here, or <a href="/new-post">Create</a> your own!</p>
+    <% } %>
+  </main>
+</body>
+</html>
